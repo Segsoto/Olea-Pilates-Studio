@@ -199,16 +199,86 @@
         .day-card p { font-size: 1.1rem; color: #333; }
 
         /* Membresías */
-        .pricing-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1200px; margin: 0 auto; }
-        .card { background-color: var(--accent-color); padding: 3rem 2.5rem; border-radius: 30px; width: 320px; text-align: center; display: flex; flex-direction: column; transition: transform 0.4s ease, box-shadow 0.4s ease; }
-        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
-        .card.highlight { background-color: var(--primary-color); transform: scale(1.05); border: 2px solid #fff; }
-        .card.highlight:hover { transform: scale(1.05) translateY(-15px); }
-        .card h3 { font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 0.5rem; }
-        .card .desc { font-size: 0.95rem; margin-bottom: 2.5rem; opacity: 0.8; }
-        .card ul { list-style: none; margin-bottom: 2.5rem; flex-grow: 1; padding: 0 1rem;}
-        .card ul li { margin-bottom: 1rem; font-size: 1rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;}
-        .card .price { font-size: 1.8rem; font-weight: 600; background: var(--bg-color); padding: 0.8rem 1.5rem; border-radius: 20px; display: inline-block; margin: 0 auto 2rem; }
+        .pricing-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card,
+        .olea90 {
+            background-color: var(--accent-color);
+            padding: 3rem 2.5rem;
+            border-radius: 30px;
+            width: 320px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card:hover,
+        .olea90:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .card.highlight {
+            background-color: var(--primary-color);
+            border: 2px solid rgba(0,0,0,0.06);
+        }
+
+        .olea90 {
+            background-color: var(--primary-color);
+            border: 2px solid rgba(0,0,0,0.06);
+            width: 360px;
+            min-height: 100%;
+        }
+
+        .card h3,
+        .olea90 h3 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card .desc,
+        .olea90 .desc {
+            font-size: 0.95rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.8;
+        }
+
+        .card ul,
+        .olea90 ul {
+            list-style: none;
+            margin-bottom: 2.5rem;
+            flex-grow: 1;
+            padding: 0 1rem;
+        }
+
+        .card ul li,
+        .olea90 ul li {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding-bottom: 0.5rem;
+        }
+
+        .card .price,
+        .olea90 .price {
+            font-size: 1.8rem;
+            font-weight: 600;
+            background: var(--bg-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 0 auto 2rem;
+        }
 
         /* FAQ */
         .faq-container { max-width: 800px; margin: 0 auto; }
@@ -269,5 +339,9 @@
             .nav-links { display: none; }
             .hero-bg h1 { font-size: 3.8rem; }
             .hero-cta { flex-direction: column; gap: 1rem; }
+            .pricing-cards { flex-direction: column; }
+            .card,
+            .olea90 { width: 100%; max-width: 420px; }
             .card.highlight { transform: scale(1); }
+            .olea90 { transform: scale(1); }
         }
