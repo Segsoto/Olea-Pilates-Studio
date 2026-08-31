@@ -1,0 +1,546 @@
+
+
+Ir al contenido
+Cómo usar Gmail con lectores de pantalla
+6 de 6,667
+Pagina web pilates
+Recibidos
+
+Camila Villalobos
+Archivos adjuntos
+sáb, 29 ago, 1:58 p.m. (hace 1 día)
+para mí
+
+Parece que este mensaje está en inglés
+
+ Un archivo adjunto
+  •  Analizado por Gmail
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olea Studio | Pilates para tu día a día</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #F9F8F4;
+            --text-color: #2C2C2A;
+            --primary-color: #B5C99A; 
+            --accent-color: #E8E5DA;
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --wa-color: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Botones */
+        .btn-primary {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 1px solid var(--text-color);
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-color);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 1px solid var(--text-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+            background: rgba(249, 248, 244, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .logo { font-family: var(--font-heading); font-size: 2rem; font-weight: 600; letter-spacing: 2px; color: var(--text-color); text-decoration: none;}
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text-color); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s ease; }
+        .nav-links a:hover { color: #7a8a66; }
+
+        /* HERO BACKGROUND */
+        .hero-bg {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* Imagen de fondo de alta calidad con un overlay oscuro para que el texto resalte */
+            background: linear-gradient(rgba(44, 44, 42, 0.4), rgba(44, 44, 42, 0.6)), url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=2070') center/cover no-repeat;
+            color: #ffffff;
+            padding: 0 5%;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin-top: 5rem; /* Compensa el navbar fijo */
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-bg h1 { 
+            font-family: var(--font-heading); 
+            font-size: 5.5rem; 
+            line-height: 1.1; 
+            margin-bottom: 1.5rem; 
+            font-weight: 400; 
+            text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .hero-bg p { font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .hero-bg .subtitle { font-style: italic; color: #e0e0e0; margin-bottom: 2.5rem; font-size: 1.5rem;}
+        
+        .hero-cta { display: flex; gap: 1.5rem; justify-content: center; }
+        
+        /* Ajuste de botones para fondo oscuro en el Hero */
+        .hero-btn-main { background-color: var(--primary-color); color: var(--text-color); border: none; }
+        .hero-btn-main:hover { background-color: #fff; }
+        .hero-btn-outline { border-color: #fff; color: #fff; }
+        .hero-btn-outline:hover { background-color: #fff; color: var(--text-color); }
+
+        section { padding: 7rem 5%; }
+        .section-title { font-family: var(--font-heading); font-size: 3.5rem; text-align: center; margin-bottom: 4rem; font-weight: 400; }
+
+        /* Imágenes con estilo orgánico */
+        .organic-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px 60px 10px 60px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            transition: transform 0.5s ease;
+        }
+        .organic-img:hover { transform: scale(1.02); }
+
+        /* El Estudio */
+        .about-section { 
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about-text h2 { font-family: var(--font-heading); font-size: 3rem; margin-bottom: 1.5rem; font-weight: 400; }
+        .about-text p { margin-bottom: 1.5rem; font-size: 1.1rem; color: #555; }
+
+        /* Beneficios */
+        .benefits-section { 
+            display: grid; 
+            grid-template-columns: 1.2fr 1fr; 
+            gap: 5rem; 
+            align-items: center; 
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .benefits-text h2 { font-family: var(--font-heading); font-size: 3rem; margin-bottom: 2rem; font-weight: 400; }
+        .benefits-text ul { list-style: none; margin-bottom: 2.5rem; }
+        .benefits-text ul li { margin-bottom: 1.5rem; font-size: 1.1rem; padding-left: 2rem; position: relative; color: #444;}
+        .benefits-text ul li::before { content: "✦"; position: absolute; left: 0; top: 2px; color: #8a9e73; font-size: 1.2rem; }
+
+        /* Equipo (NUEVA SECCIÓN) */
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+        .team-member { text-align: center; max-width: 300px; }
+        .team-member img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .team-member h3 { font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .team-member p { font-size: 0.95rem; color: #666; font-style: italic; }
+
+        /* Testimonios (NUEVA SECCIÓN) */
+        .testimonials-bg { background-color: var(--accent-color); border-radius: 40px; padding: 6rem 5%; margin: 0 3%; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; max-width: 1200px; margin: 0 auto; }
+        .review-card { background: var(--bg-color); padding: 3rem 2rem; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+        .stars { color: #D4AF37; margin-bottom: 1rem; font-size: 1.2rem; letter-spacing: 2px; }
+        .review-text { font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem; color: #444; }
+        .review-author { font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Horarios */
+        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto; }
+        .day-card { background-color: var(--primary-color); padding: 2rem; border-radius: 20px; text-align: center; transition: transform 0.3s ease; }
+        .day-card.alt { background-color: var(--accent-color); }
+        .day-card:hover { transform: translateY(-10px); }
+        .day-card h3 { font-size: 1.2rem; font-weight: 600; letter-spacing: 2px; margin-bottom: 1rem; }
+        .day-card p { font-size: 1.1rem; color: #333; }
+
+        /* Membresías */
+        .pricing-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .card { background-color: var(--accent-color); padding: 3rem 2.5rem; border-radius: 30px; width: 320px; text-align: center; display: flex; flex-direction: column; transition: transform 0.4s ease, box-shadow 0.4s ease; }
+        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+        .card.highlight { background-color: var(--primary-color); transform: scale(1.05); border: 2px solid #fff; }
+        .card.highlight:hover { transform: scale(1.05) translateY(-15px); }
+        .card h3 { font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .card .desc { font-size: 0.95rem; margin-bottom: 2.5rem; opacity: 0.8; }
+        .card ul { list-style: none; margin-bottom: 2.5rem; flex-grow: 1; padding: 0 1rem;}
+        .card ul li { margin-bottom: 1rem; font-size: 1rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;}
+        .card .price { font-size: 1.8rem; font-weight: 600; background: var(--bg-color); padding: 0.8rem 1.5rem; border-radius: 20px; display: inline-block; margin: 0 auto 2rem; }
+
+        /* FAQ */
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-item { margin-bottom: 1rem; border-bottom: 1px solid #ddd; }
+        .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.5rem 0; font-size: 1.2rem; font-family: var(--font-body); color: var(--text-color); font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-answer p { padding-bottom: 1.5rem; color: #555; line-height: 1.8;}
+
+        /* Mapa y Banner Final */
+        .map-section { position: relative; padding: 0; margin-top: 5rem; }
+        .map-container { width: 100%; filter: grayscale(20%) sepia(10%); transition: filter 0.3s ease; }
+        .map-container:hover { filter: grayscale(0%); }
+        .contact-card {
+            background: var(--bg-color);
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 400px;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .contact-card h3 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .contact-card p { margin-bottom: 1rem; font-size: 1.1rem; }
+
+        /* Footer */
+        footer { background-color: var(--text-color); color: var(--bg-color); padding: 5rem 5% 2rem; margin-top: -5px;}
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; max-width: 1200px; margin: 0 auto 3rem; }
+        .footer-logo { font-family: var(--font-heading); font-size: 3rem; margin-bottom: 1rem; color: var(--bg-color);}
+        .footer-col h3 { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--primary-color); }
+        .footer-col p { margin-bottom: 0.8rem; }
+        .footer-col a { color: var(--bg-color); text-decoration: none; transition: color 0.3s ease; }
+        .footer-col a:hover { color: var(--primary-color); }
+        .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; font-size: 0.85rem; opacity: 0.6; }
+
+        /* Botón WhatsApp */
+        .floating-wa { position: fixed; bottom: 30px; right: 30px; background-color: var(--wa-color); color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); z-index: 1000; transition: transform 0.3s ease; }
+        .floating-wa:hover { transform: scale(1.1); }
+        .floating-wa svg { width: 35px; height: 35px; fill: currentColor; }
+
+        /* Animaciones JS */
+        .scroll-anim { transition: opacity 0.8s ease, transform 0.8s ease; }
+        .js-hidden { opacity: 0; transform: translateY(40px); }
+        .js-visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 992px) {
+            .about-section, .benefits-section { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+            .benefits-text ul li { padding-left: 0; }
+            .benefits-text ul li::before { display: none; }
+            .organic-img { height: 400px; }
+            .benefits-section .organic-img { grid-row: 1; /* Imagen arriba en móviles */ }
+            .contact-card { position: relative; top: 0; left: 0; transform: none; max-width: 100%; border-radius: 0; box-shadow: none; text-align: center;}
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-bg h1 { font-size: 3.8rem; }
+            .hero-cta { flex-direction: column; gap: 1rem; }
+            .card.highlight { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">OLEA</a>
+        <ul class="nav-links">
+            <li><a href="#estudio">El Estudio</a></li>
+            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#membresias">Membresías</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+        <a href="https://www.instagram.com/oleastudio.pilates/" class="btn-primary" target="_blank">Reservar</a>
+    </nav>
+
+    <header class="hero-bg">
+        <div class="hero-content">
+            <h1>Pilates para tu día a día</h1>
+            <p>Reformer • Mat • Yoga</p>
+            <p class="subtitle">Un espacio para moverte, conectar y sentirte bien.</p>
+            <div class="hero-cta">
+                <a href="#membresias" class="btn-primary hero-btn-main">Ver Membresías</a>
+                <a href="#estudio" class="btn-secondary hero-btn-outline">Conocer el Estudio</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="estudio" class="scroll-anim">
+        <div class="about-section">
+            <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&q=80&w=1000" alt="Estudio de Pilates Olea" class="organic-img">
+            <div class="about-text">
+                <h2>Tu refugio de movimiento</h2>
+                <p>En Olea Studio creemos en el movimiento consciente como base para una vida equilibrada. No se trata solo de ejercicio, sino de crear una conexión profunda entre tu mente y tu cuerpo, dejando atrás el estrés de la rutina.</p>
+                <p>Nuestro espacio está diseñado para ser tu santuario: cálido, minimalista y libre de distracciones. Ya sea en nuestras camas de Reformer, en el Mat o a través del Yoga, te acompañamos para que encuentres tu propia evolución a tu ritmo.</p>
+                <a href="#horarios" class="btn-secondary" style="margin-top: 1.5rem;">Explorar Clases</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="scroll-anim">
+        <div class="benefits-section">
+            <div class="benefits-text">
+                <h2>Transforma tu cuerpo y mente</h2>
+                <ul>
+                    <li><strong>Conexión Mente-Cuerpo:</strong> Reduce el estrés, mejora tu enfoque y libera tensiones acumuladas.</li>
+                    <li><strong>Fuerza sin hipertrofia:</strong> Tonifica músculos largos y definidos sin impacto agresivo en tus articulaciones.</li>
+                    <li><strong>Corrección Postural:</strong> Fortalece el "core" para aliviar dolores de espalda y mejorar tu alineación natural.</li>
+                    <li><strong>Atención Personalizada:</strong> Clases adaptables a cualquier nivel, asegurando que trabajes de forma segura.</li>
+                </ul>
+                <a href="#membresias" class="btn-primary" style="margin-top: 1rem;">Comenzar mi transformación</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1600618528240-fb9fc964b853?auto=format&fit=crop&q=80&w=1000" alt="Beneficios del Pilates Reformer" class="organic-img" style="border-radius: 60px 10px 60px 10px;">
+        </div>
+    </section>
+
+    <div class="testimonials-bg scroll-anim">
+        <h2 class="section-title">Lo que dice nuestra comunidad</h2>
+        <div class="testimonials-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Nunca había hecho Pilates y estaba nerviosa, pero en Olea me hicieron sentir en casa desde el primer día. Las clases son increíbles y ya no me duele la espalda."</p>
+                <p class="review-author">— Camila R.</p>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"El estudio es bellísimo, súper limpio y la energía es de pura paz. El Reformer me ha ayudado muchísimo a ganar flexibilidad. 100% recomendado."</p>
+                <p class="review-author">— Sofía V.</p>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Mi momento favorito de la semana. Los instructores siempre están pendientes de tu postura para que no te lesiones. Es la mejor inversión que he hecho en mí."</p>
+                <p class="review-author">— Andrea M.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="equipo" class="scroll-anim">
+        <h2 class="section-title">Conoce a quienes te guían</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800" alt="Instructora Olea">
+                <h3>Valeria</h3>
+                <p>Lead Instructor • Reformer & Mat</p>
+            </div>
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&q=80&w=800" alt="Instructora Olea">
+                <h3>Daniela</h3>
+                <p>Yoga & Pilates Flow</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="horarios" class="scroll-anim">
+        <h2 class="section-title">Encuentra tu horario</h2>
+        <div class="schedule-grid">
+            <div class="day-card">
+                <h3>LUNES & MIÉRCOLES</h3>
+                <p>6:00 am - 7:10 am - 8:20 am</p>
+                <p>6:00 pm - 7:00 pm</p>
+            </div>
+            <div class="day-card alt">
+                <h3>MARTES & JUEVES</h3>
+                <p>10:00 am - 11:10 am</p>
+                <p>5:00 pm - 6:00 pm - 7:00 pm</p>
+            </div>
+            <div class="day-card">
+                <h3>VIERNES</h3>
+                <p>6:00 am - 7:10 am</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="membresias" class="scroll-anim">
+        <h2 class="section-title">Elige tu membresía</h2>
+        <div class="pricing-cards">
+            <div class="card">
+                <h3>OLEA FLOW</h3>
+                <p class="desc">Ideal para complementar tus otras rutinas.</p>
+                <ul>
+                    <li>4 clases mensuales</li>
+                    <li>Horarios flexibles</li>
+                    <li>Cancelación 12h</li>
+                </ul>
+                <div class="price">₡35,000</div>
+                <a href="#" class="btn-secondary">Elegir Flow</a>
+            </div>
+            <div class="card highlight">
+                <h3>OLEA CORE</h3>
+                <p class="desc">La favorita para ver cambios constantes.</p>
+                <ul>
+                    <li>8 clases mensuales</li>
+                    <li>Horarios flexibles</li>
+                    <li>Cancelación 12h</li>
+                </ul>
+                <div class="price">₡55,000</div>
+                <a href="#" class="btn-primary">Elegir Core</a>
+            </div>
+            <div class="card">
+                <h3>OLEA FULL</h3>
+                <p class="desc">Para quienes aman el movimiento diario.</p>
+                <ul>
+                    <li>12 clases mensuales</li>
+                    <li>Horarios flexibles</li>
+                    <li>Cancelación 12h</li>
+                </ul>
+                <div class="price">₡75,000</div>
+                <a href="#" class="btn-secondary">Elegir Full</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="scroll-anim">
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">¿Necesito experiencia previa en Pilates? <span>+</span></button>
+                <div class="faq-answer"><p>¡Para nada! Nuestras clases son adaptables. Los instructores te guiarán paso a paso para que te familiarices con los equipos y posturas, sin importar tu nivel inicial.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Qué debo llevar a mi primera clase? <span>+</span></button>
+                <div class="faq-answer"><p>Solo necesitas ropa cómoda, medias antideslizantes (grip socks) que son obligatorias por higiene y seguridad, y una botella de agua para mantenerte hidratada.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Cómo funcionan las políticas de cancelación? <span>+</span></button>
+                <div class="faq-answer"><p>Para que no pierdas tu clase, te pedimos cancelar a través del sistema con al menos 12 horas de anticipación. De esta forma, otro alumno en lista de espera puede aprovechar el espacio.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="map-section scroll-anim">
+        <div class="contact-card">
+            <h3>Ven a conocernos</h3>
+            <p>📍 <strong>Dirección:</strong> San José, Costa Rica. (Reemplazar con dirección exacta).</p>
+            <p>🕒 <strong>Horario:</strong> Lunes a Viernes, según clases.</p>
+            <p>🚗 <strong>Parqueo:</strong> Contamos con espacios de parqueo para clientes.</p>
+            <a href="https://wa.me/50688888888" class="btn-primary" style="margin-top: 1.5rem; width: 100%; text-align: center;">Escríbenos por WhatsApp</a>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125745.31499540024!2d-84.1804791307684!3d9.935612371271617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e342c50d15c5%3A0xe6746a6a9f11b882!2sSan%20Jos%C3%A9%2C%20Costa%20Rica!5e0!3m2!1sen!2s!4v1715000000000!5m2!1sen!2s" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2 class="footer-logo">OLEA</h2>
+                <p>Un espacio para moverte, conectar y sentirte bien.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p>WhatsApp: +506 8888-8888</p> 
+                <p>Email: hola@oleastudio.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>Síguenos</h3>
+                <p><a href="https://www.instagram.com/oleastudio.pilates/" target="_blank">Instagram (@oleastudio.pilates)</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Olea Studio Pilates. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/50688888888?text=Hola!%20Me%20gustaría%20agendar%20una%20clase%20en%20Olea%20Studio." class="floating-wa" target="_blank" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.2-115-65.1-157zM223.9 414.9c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.1l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const animatedElements = document.querySelectorAll('.scroll-anim');
+            
+            animatedElements.forEach(el => el.classList.add('js-hidden'));
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('js-hidden');
+                        entry.target.classList.add('js-visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+            animatedElements.forEach(el => observer.observe(el));
+
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    question.classList.toggle('active');
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('span');
+                    
+                    if (question.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        icon.textContent = "-";
+                    } else {
+                        answer.style.maxHeight = null;
+                        icon.textContent = "+";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+index.html
+Mostrando index.html
